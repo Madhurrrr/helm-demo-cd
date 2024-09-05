@@ -1,0 +1,7 @@
+image:
+  repository: "helmdemo/latest1"
+  tag: "latest"
+
+service:
+  type: LoadBalancer
+  port: 8080
