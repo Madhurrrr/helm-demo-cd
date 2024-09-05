@@ -45,5 +45,5 @@ jobs:
 
       - name: Deploy to AKS using Helm
         run: |
-          helm upgrade --install myapp ./helm/myapp --set image.repository=terafromdemoregistry/helmdemo --set image.tag=latest1
+          helm upgrade --install myapp ./helm/myapp --set image.repository=${{ secrets.ACR_LOGIN_SERVER }}/helmdemo --set image.tag=latest1
 
