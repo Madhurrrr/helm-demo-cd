@@ -43,7 +43,7 @@ jobs:
         run: |
           az aks get-credentials --resource-group helmdemo-resource-group  --name helmdemo-cluster-1
 
-       - name: Deploy to AKS using Helm
+      - name: Deploy to AKS using Helm
         run: |
           helm upgrade --install myapp ./helm/myapp --set image.repository=${{ secrets.ACR_LOGIN_SERVER }}/helmdemo --set image.tag=latest1
 
