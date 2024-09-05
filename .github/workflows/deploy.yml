@@ -42,6 +42,7 @@ jobs:
       - name: Get AKS credentials
         run: |
           az aks get-credentials --resource-group helmdemo-resource-group  --name helmdemo-cluster-1
+          
 
       - name: Deploy to AKS using Helm
         run: |
