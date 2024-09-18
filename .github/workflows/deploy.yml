@@ -44,7 +44,7 @@ jobs:
         run: |
           az aks get-credentials --resource-group vaultdemo-resource-group  --name vaultdemo-cluster-1
           
-
+      #Re-deploy
       - name: Deploy to AKS using Helm
         run: |
           helm upgrade --install myvaultdemo ./helm/myvaultdemo --set image.repository=${{ secrets.ACR_LOGIN_SERVER }}/vaultdemo --set image.tag=latest1
