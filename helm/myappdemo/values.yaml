@@ -1,5 +1,5 @@
 image:
-  repository: "helmdemo/latest1"
+  repository: "vaultdemo/latest1"
   tag: "latest"
 
 service:
