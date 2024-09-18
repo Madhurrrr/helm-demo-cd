@@ -1,5 +1,5 @@
 image:
-  repository: "vaultdemo/latest1"
+  repository: "demovault/latest1"
   tag: "latest"
 
 service:
