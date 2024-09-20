@@ -1,5 +1,5 @@
 image:
-  repository: "mydemovault/latest1"
+  repository: "testvaultapp/latest1"
   tag: "latest"
 
 service:

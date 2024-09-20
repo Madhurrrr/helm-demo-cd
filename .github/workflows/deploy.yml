@@ -42,10 +42,10 @@ jobs:
 
       - name: Get AKS credentials
         run: |
-          az aks get-credentials --resource-group mydemovault-resource-group  --name mydemovault-cluster-1
+          az aks get-credentials --resource-group testvaultapp-resource-group  --name testvaultapp-cluster-1
           
       #Re-deploy
       - name: Deploy to AKS using Helm
         run: |
-          helm upgrade --install mydemovault ./helm/mydemovault --set image.repository=${{ secrets.ACR_LOGIN_SERVER }}/mydemovault --set image.tag=latest1
+          helm upgrade --install testvaultapp ./helm/testvaultapp --set image.repository=${{ secrets.ACR_LOGIN_SERVER }}/testvaultapp --set image.tag=latest1
 
