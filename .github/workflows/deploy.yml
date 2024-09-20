@@ -41,5 +41,5 @@ jobs:
       #Re-deploy
       - name: Deploy to AKS using Helm
         run: |
-          helm upgrade --install testvaultapp ./helm/testvaultapp --set image.repository=${{ secrets.ACR_LOGIN_SERVER }}/testvaultapp --set image.tag=latest1
+          helm upgrade --install testvaultapp ./helm/testvaultapp --set image.repository=${{ secrets.ACR_LOGIN_SERVER }}/testvaultapp --set image.tag=latest2
 
