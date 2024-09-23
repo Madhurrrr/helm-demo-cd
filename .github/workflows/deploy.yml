@@ -1,9 +1,16 @@
 name: Deploy Java Application to Azure
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+    inputs:
+      environment:
+        Description: Enter the Environment
+        required: true
+        type: choice
+        options:
+          - Sandbox
+          - Pre production
+          - Production
 jobs:
   deploy:
     runs-on: ubuntu-latest
