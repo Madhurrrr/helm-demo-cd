@@ -21,20 +21,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: testvaultapp
+  name: {{ .Chart.Name }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: testvaultapp
+      app: {{ .Chart.Name }}
   template:
     metadata:
       labels:
-        app: testvaultapp
+        app: {{ .Chart.Name }}
     spec:
       containers:
-        - name: testvaultapp
-          image: terafromdemoregistry.azurecr.io/testvaultapp:latest2
+        - name: {{ .Chart.Name }}
+          image: terafromdemoregistry.azurecr.io/demovaultapp:latest2
           ports:
             - containerPort: 8080
           env:
